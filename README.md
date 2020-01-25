@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Data source
+
+Thanks to [TheSportsDB](https://www.thesportsdb.com/)<br />
+An open, crowd-sourced database of sports artwork and metadata with a free API.
+
 ## Available Scripts
 
 In the project directory, you can run:

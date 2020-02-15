@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { getAllLeagues } from '../actions/index';
 import { connect } from 'react-redux';
-import { ListGroup, ListGroupItem } from 'reactstrap';
 
 export class AllLeagues extends Component {
   componentWillMount() {
@@ -10,11 +9,11 @@ export class AllLeagues extends Component {
 
   render() {
     return (
-      <ListGroup>
-          {this.props.leagues.map(league => (
-              <ListGroupItem key={league.idLeague}>{league.strLeague}</ListGroupItem>
-          ))}
-      </ListGroup>
+      <ul className="nav bd-sidenav">
+        {this.props.leagues.map(league => (
+            <li><a key={league.idLeague} href="#">{league.strLeague}</a></li>
+        ))}
+      </ul>
     );
   }
 }

@@ -11,18 +11,23 @@ export class AllLeagues extends Component {
     return (
       <ul className="nav bd-sidenav">
         {this.props.leagues.map(league => (
-            <li><a key={league.idLeague} href="#">{league.strLeague}</a></li>
+          <li>
+            <a key={league.idLeague} href="#">
+              {league.strLeague}
+            </a>
+          </li>
         ))}
       </ul>
     );
   }
 }
 
-const mapStateToProps = (store) => {
+const mapStateToProps = store => {
   return {
     leagues: store.allLeaguesReducer.leagues
   };
 };
+
 const mapDispatchToProps = {
   getAllLeagues
 };
